@@ -1,23 +1,32 @@
-# imc
-Hyperion- Imaging Mass Cytometry data analysis
-Installation
-To install the stable version from CRAN:
+# Hyperion- Imaging Mass Cytometry data analysis
 
+# Installation
+
+To install the stable version from CRAN and bioconductor:
+
+```
 install.packages("shiny")
-Getting Started
-Once installed, load the library and run an example:
+install.packages("tidyverse")
+install.packages("data.table")
+install.packages("stringr")
+install.packages("mclust")
 
-library(shiny)
-# Launches an app, with the app's source code included
-runExample("06_tabsets")
-# Lists more prepackaged examples
-runExample()
-For more examples and inspiration, check out the Shiny User Gallery.
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("EBImage")
+```
 
 
+Once installed, load the library and run the app:
+
+```
 library(shiny)
 library(tidyverse)
 library(EBImage)
 library(stringr)
 library(data.table)
 library(mclust)
+
+runApp('/imcviewer')
+```
