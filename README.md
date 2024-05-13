@@ -1,2 +1,2 @@
 # imc
-imaging mass cytometry Hyperion data analysis
+Hyperion- Imaging Mass Cytometry data analysis
